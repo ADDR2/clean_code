@@ -1,6 +1,16 @@
 // Bad
-let myVar = 3 + 4 > 8 ? 2 : 5 - 2 === 4 ? 3 : 5; 
+function doSomething(isValid, isComplex) {
+    const myVar = isValid ? 1 : isComplex ? 2 : 0;
+
+    // More code
+}
 
 // Good
-if (3 + 4 > 8) myVar = 2;
-else myVar = (5 - 2 === 4)? 3 : 5;
+function doSomethingElse(isValid, isComplex) {
+    let myVar;
+    
+    if (isValid) myVar = 1;
+    else myVar = isComplex? 2 : 0;
+
+    // More code
+}
